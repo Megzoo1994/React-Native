@@ -1,11 +1,3 @@
 
-export * from "./task"
-export * from "./NewTask"
-export * from "./Sign"
-export * from "./SignIn"
-export * from "./Flat"
-export * from "./Cat"
-export * from "./MyAccount"
-export * from "./LogIn"
-export * from "./Abd.js"
+
 export * from "./ShopzHome"

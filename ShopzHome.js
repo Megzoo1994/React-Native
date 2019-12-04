@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 
-import { Text, View, FlatList, StyleSheet, Image } from 'react-native'
+import { Text, View, FlatList, StyleSheet, Image ,TouchableOpacity } from 'react-native'
+import { icons } from '../assets/icons';
 
 export class ShopzHome extends Component {
 
     render() {
-        const { ViewHeadStyle, IconsStyle, } = styles
+        const { ViewHeadStyle, IconsStyle, SliderStyle , touchbalOpacitySeconde} = styles
         return (
 
-            
+            <View>
             <View style={ViewHeadStyle}>
 
                 <Image
@@ -36,13 +37,45 @@ export class ShopzHome extends Component {
                         style={IconsStyle}
                     />
 
-
-
                 </View>
+
+              
+            </View>
+
+            <View 
+                 >
+            <Image  source ={{uri:"http://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_hanv9909.jpg"}}
+            style={{width:"100%" , height:200}} />
 
             </View>
 
-           
+
+            <FlatList
+                    numColumns={2}
+                    data={inputData}
+                    showsVerticalScrollIndicator={false}
+                    extraData={this.state}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item, index }) => {
+                        return (
+                            <View style={{ justifyContent: 'center', alignItems: 'center', width: 180, height: 150, marginBottom: 5 , marginTop:20 }}>
+                                <TouchableOpacity style={touchbalOpacitySeconde}>
+                                    <Image source={item.img} style={{ width: 80, height: 80 }} />
+                                </TouchableOpacity>
+                            </View>
+
+                        )
+                    }
+
+                    }
+
+                />
+
+
+
+
+
+            </View>
 
            
 
@@ -70,10 +103,57 @@ const styles = StyleSheet.create({
         marginLeft: 10
 
     },
+
+    SliderStyle :{
+         width:"100%",
+         height : 200,
+         backgroundColor:'black'
+
+    },
+
+
+    touchbalOpacitySeconde :{
+        width: 150,
+        height: 150,
+        borderWidth: 1,
+        borderColor: 'black',
+        borderRadius: 10,
+        backgroundColor: 'white',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+
   
+
     
+  
     
 
 })
+
+const inputData = [
+
+
+    {
+        
+        img: icons.shoe
+    },
+    {
+        
+        img: icons.drss
+    },
+    
+    {
+        
+        img: icons.shoe
+    },
+    {
+        
+        img: icons.drss
+    },
+    
+       
+ 
+]
 
 
