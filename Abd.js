@@ -50,7 +50,7 @@ export  class Abd extends Component {
          <TouchableOpacity>
           <Text style={{ color: 'white' }}>Create Account</Text>
           </TouchableOpacity> 
-          <TouchableOpacity style={{alignItems: 'flex-end', marginBottom: 20}}>
+          <TouchableOpacity style={{alignItems: 'flex-end'}}>
           <Text style={{ color: 'white' }}>Forget Password?</Text>
           </TouchableOpacity>
           </ScrollView>
