@@ -13,7 +13,7 @@ export class NewTask extends Component {
             <Container containerStyle={{ justifyContent: 'center' }} >
 
 
-                <Btn name={'MAGDY'} btnStyle={{ backgroundColor:"red" }}>  </Btn>
+                <Btn name={'MAGDY'} btnStyle={{ backgroundColor:"red" , width:"100%" }}>  </Btn>
                 <Btn name={'NENO'} >  </Btn>
                 <Btn name={'ISLAM'}>  </Btn>
             </Container>

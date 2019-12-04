@@ -10,7 +10,7 @@ import {
   ScrollView,
   ActivityIndicator,
 } from 'react-native';
-export  class Abd extends Component {
+export  class  extends Component {
   render() {
     const { username, touchableOpacity } = styles;
     return (
@@ -78,3 +78,5 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
 });
+
+
