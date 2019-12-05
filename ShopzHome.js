@@ -21,7 +21,7 @@ export class ShopzHome extends Component {
                     source={{ uri: 'https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/price_tag-512.png' }}
                     style={IconsStyle}
                 />
-                <View style={{ alignItems: 'flex-end', flexDirection: 'row', marginLeft: 160 }}>
+                <View style={{ alignItems: 'flex-end', flexDirection: 'row', marginLeft: 200 }}>
                     <Image
                         source={{ uri: 'https://icon-library.net/images/favorite-icon/favorite-icon-0.jpg' }}
                         style={IconsStyle}
@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
 
     IconsStyle: {
 
-        width: 25,
-        height: 25,
+        width: 20,
+        height: 20,
         tintColor: 'white',
         marginLeft: 10
 
