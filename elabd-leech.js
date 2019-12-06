@@ -1,48 +1,47 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
 
-
 export default class App extends React.Component {
-  render () {
+  render() {
     const {
       touchableOpacityfirst,
       firstStyle,
       viewTouch,
       touchableOpacitySecond,
     } = styles;
-
+    
     return (
       <View>
-        <View style={{ backgroundColor: "#222222", height: 100, alignItems: 'center', flexDirection: 'row', width: "100%" }}>
+        <View style={{backgroundColor: "#222222", height: 100, alignItems: 'center', flexDirection: 'row',  width: "100%"}}>
           <View>
-            <Image
-              style={{ width: 50, height: 20 }}
-              source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4CSfVQBlv7B0_kSE9_z_v6vg-kmGeYk6KOys3Nke_eB32mXhhw&s' }}
-            />
+          <Image
+          style={{width: 50, height: 20}}
+          source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4CSfVQBlv7B0_kSE9_z_v6vg-kmGeYk6KOys3Nke_eB32mXhhw&s'}}
+          />
           </View>
-          <View style={{ flexDirection: 'row', marginLeft: 250 }}>
-            <Image
-              style={{ width: 30, height: 20, tintColor: 'white' }}
-              source={{ uri: 'https://cdn0.iconfinder.com/data/icons/shopping-cart-26/1000/Shopping-Basket-03-512.png' }}
-            />
-            <Image
-              style={{ width: 30, height: 20, tintColor: 'white' }}
-              source={{ uri: 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png' }}
-            />
+          <View style={{flexDirection: 'row', marginLeft: 250}}>
+          <Image
+          style={{width: 30, height: 20, tintColor: 'white'}}
+          source={{uri: 'https://cdn0.iconfinder.com/data/icons/shopping-cart-26/1000/Shopping-Basket-03-512.png'}}
+          />
+          <Image
+          style={{width: 30, height: 20, tintColor: 'white'}}
+          source={{uri: 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png'}}
+          />
           </View>
         </View>
-        <View>
-          <Image
-            style={{ width: "100%", height: 150 }}
-            source={{ uri: 'https://4.top4top.net/p_1433dj2g51.jpg' }}
+    <View>
+        <Image
+        style={{width: "100%", height: 150}}
+          source={require ('./assets/white-and-black-floral-cap-sleeved-shirt-994523.jpg')}
           />
         </View>
         <View>
-          <FlatList
+        <FlatList
             data={inputData}
             numColumns={2}
             showsVerticalScrollIndicator={false}
-            keyExtractor={(item, index) => index.toString()}
+                        keyExtractor={(item, index) => index.toString()}
             renderItem={({ item, index }) => {
               return (
                 <View
@@ -56,37 +55,38 @@ export default class App extends React.Component {
                     style={
                       styles.touchableOpacityfirst
                     }>
-                    <Text>
-                      {item.img}
-                    </Text>
+                    <Image
+                    source={item.img}
+                    style={{height: 30, width: 65, borderRadius: 15}}
+                    />
                   </TouchableOpacity>
                 </View>
               );
             }}
           />
-        </View>
+        </View>  
       </View>
     );
   }
 }
 const inputData = [
   {
-    img: 'elabd',
+    img: require('./assets/Apple_app_.png'), 
   },
   {
-    img: 'elabd',
+    img: require('./assets/apple.png'), 
   },
   {
-    img: 'elabd',
+    img: require('./assets/appleapp.png'), 
   },
   {
-    img: 'elabd',
+    img: require('./assets/google.png'), 
   },
   {
-    img: 'elabd',
+    img: require('./assets/googleapp.png'), 
   },
   {
-    img: 'elabd',
+    img: require('./assets/googleplay.png'), 
   },
 ]
 const styles = StyleSheet.create({
@@ -100,5 +100,5 @@ const styles = StyleSheet.create({
     margin: 5,
     borderRadius: 10,
   },
-
+  
 });
